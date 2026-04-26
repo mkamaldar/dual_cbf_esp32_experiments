@@ -21,6 +21,7 @@ a Van der Pol oscillator, and an inverted pendulum (relative-degree 2).
 [pypi]: https://pypi.org/project/dual-cbf-compiler/
 [gh-compiler]: https://github.com/mkamaldar/dual_cbf_compiler
 
+![Van der Pol Phase Portrait](vdp_2_64_64_1/vdp_phase.png)
 ---
 
 ## What is in this repository
@@ -288,9 +289,7 @@ dual_cbf_esp32_experiments/
 
 ```bibtex
 @article{kamaldar2026dual,
-  title  = {Computing Exact Lie Derivatives without Backpropagation
-            in Neural Network Control Barrier Functions:
-            A Dual-Algebra Approach},
+  title  = {Extracting Exact Lie Derivatives Without Backpropagation: A Dual Compiler for Neural Control Barrier Functions},
   author = {Kamaldar, Mohammadreza},
   journal= {IEEE Transactions on Control Systems Technology},
   year   = {2026},
