@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# ESP-IDF build artifacts
+build/
+sdkconfig
+sdkconfig.old
+managed_components/
+dependencies.lock
+
+# Captured serial logs and parsed measurement output
+*/serial.log
+paper_measurements.tex
+*.bak
+
+# Generated host binaries
+/tmp/bicycle_host
+/tmp/vdp_host
+/tmp/pend_host
+
+# Closed-loop simulation output
+*.pdf
+!docs/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,14 @@
+# Host-side dependencies for training, compiling, simulating, and parsing.
+# Install with: pip install -r requirements.txt
+
+# Compiler (the package this paper releases).
+dual-cbf-compiler>=0.1.0
+
+# Training and ONNX export.
+torch>=2.0
+onnx>=1.15
+
+# Closed-loop simulation and figure generation.
+numpy>=1.24
+matplotlib>=3.7
+cvxpy>=1.4         # only used by 03_run_closed_loop.py for the QP

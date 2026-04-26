@@ -1,0 +1,17 @@
+# Pin to 240 MHz, no power management.
+CONFIG_ESP32S3_DEFAULT_CPU_FREQ_240=y
+CONFIG_ESP32S3_DEFAULT_CPU_FREQ_MHZ=240
+CONFIG_PM_ENABLE=n
+
+# No Wi-Fi/Bluetooth: saves RAM and removes scheduler noise.
+CONFIG_ESP32_WIFI_INIT_DEFAULT=n
+CONFIG_BT_ENABLED=n
+
+# Console over USB-Serial-JTAG (the DevKitC-1's built-in JTAG/UART bridge).
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+
+# Compiler optimization: prefer speed.
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+
+# Larger main task stack for our static cycle-count arrays.
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=16384
