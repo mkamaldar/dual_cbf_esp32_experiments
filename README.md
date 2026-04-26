@@ -2,8 +2,8 @@
 
 This repository contains the embedded experiments accompanying the paper
 
-> M. Kamaldar, _Computing Exact Lie Derivatives without Backpropagation in
-> Neural Network Control Barrier Functions: A Dual-Algebra Approach_,
+> M. Kamaldar, _Extracting Exact Lie Derivatives Without Backpropagation:
+> A Dual Compiler for Neural Control Barrier Functions_,
 > submitted to IEEE Transactions on Control Systems Technology, 2026.
 
 The paper introduces a dual-algebraic compiler that translates a trained
