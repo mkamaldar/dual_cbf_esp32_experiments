@@ -22,6 +22,7 @@ a Van der Pol oscillator, and an inverted pendulum (relative-degree 2).
 [gh-compiler]: https://github.com/mkamaldar/dual_cbf_compiler
 
 ![Van der Pol Phase Portrait](vdp_2_64_64_1/vdp_phase.png)
+*Phase portrait of the Van der Pol oscillator evaluated on the bare-metal ESP32-S3. The dual-compiled neural CBF filter (blue) successfully confines the otherwise unsafe nominal trajectory (black) within the learned boundary (red).*
 ---
 
 ## What is in this repository
