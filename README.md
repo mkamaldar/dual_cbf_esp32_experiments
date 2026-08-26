@@ -3,8 +3,7 @@
 This repository contains the embedded experiments accompanying the paper
 
 > M. Kamaldar, _Extracting Exact Lie Derivatives Without Backpropagation:
-> A Dual Compiler for Neural Control Barrier Functions_,
-> submitted to IEEE Transactions on Control Systems Technology, 2026.
+> A Dual Compiler for Neural Control Barrier Functions_,2026.
 
 The paper introduces a dual-algebraic compiler that translates a trained
 neural control barrier function (CBF) into a self-contained C++ header
