@@ -1,9 +1,8 @@
 # Embedded validation for the Dual-CBF compiler
 
-This repository contains the embedded experiments accompanying the paper
+This repository contains the embedded experiments accompanying the paper:
 
-> M. Kamaldar, _Extracting Exact Lie Derivatives Without Backpropagation:
-> A Dual Compiler for Neural Control Barrier Functions_,2026.
+> M. Kamaldar, _[Extracting Exact Lie Derivatives Without Backpropagation: A Dual Compiler for Neural Control Barrier Functions](https://arxiv.org/pdf/2604.23995)_, 2026.
 
 The paper introduces a dual-algebraic compiler that translates a trained
 neural control barrier function (CBF) into a self-contained C++ header
