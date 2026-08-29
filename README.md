@@ -290,7 +290,7 @@ dual_cbf_esp32_experiments/
 @article{kamaldar2026dual,
   title  = {Extracting Exact Lie Derivatives Without Backpropagation: A Dual Compiler for Neural Control Barrier Functions},
   author = {Kamaldar, Mohammadreza},
-  journal= {IEEE Transactions on Control Systems Technology},
+  journal= {Arxiv},
   year   = {2026},
   note   = {Submitted}
 }
