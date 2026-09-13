@@ -29,7 +29,7 @@ measure timing, memory behavior, and numerical agreement of generated code on
 an ESP32-S3 dev board on a bench. Nothing here is a flight controller, a
 vehicle controller, or a certified safety component, and nothing here has
 been evaluated against ISO 26262, DO-178C, or IEC 61508. Anyone adapting this
-code to a system that can injure people or damage property is responsible for
+code to a system is responsible for
 their own verification, validation, and certification.
 
 ## What is in this repository
