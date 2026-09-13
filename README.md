@@ -22,6 +22,15 @@ a Van der Pol oscillator, and an inverted pendulum (relative-degree 2).
 ![Van der Pol Phase Portrait](vdp_2_64_64_1/vdp_phase.png)
 *Phase portrait of the Van der Pol oscillator evaluated on the bare-metal ESP32-S3. The dual-compiled neural CBF filter (blue) successfully confines the otherwise unsafe nominal trajectory (black) within the learned boundary (red).*
 ---
+## Status and intended use
+
+These are benchmark and validation experiments for a research paper. They
+measure timing, memory behavior, and numerical agreement of generated code on
+an ESP32-S3 dev board on a bench. Nothing here is a flight controller, a
+vehicle controller, or a certified safety component, and nothing here has
+been evaluated against ISO 26262, DO-178C, or IEC 61508. Anyone adapting this
+code to a system that can injure people or damage property is responsible for
+their own verification, validation, and certification.
 
 ## What is in this repository
 
@@ -97,6 +106,11 @@ Verify the compiler is installed:
 ```bash
 dual-cbf-compile --help
 ```
+
+
+The experiments are pinned to `dual-cbf-compiler==0.1.1`. If you upgrade the
+compiler, re-run `make compile` and `make host-test` before flashing, and
+record the compiler version next to any timing you report.
 
 ### 2. ESP-IDF (one-time, ~15 min)
 
@@ -292,10 +306,12 @@ dual_cbf_esp32_experiments/
   author = {Kamaldar, Mohammadreza},
   journal= {Arxiv},
   year   = {2026},
+  url= https://arxiv.org/pdf/2604.23995,
   note   = {Submitted}
 }
 ```
 
 ## License
-
-MIT — see `LICENSE`.
+This repository is released under the
+MIT License; see [LICENSE](LICENSE). The compiler it depends on,
+`dual_cbf_compiler`, is a separate project under the Apache License 2.0.
