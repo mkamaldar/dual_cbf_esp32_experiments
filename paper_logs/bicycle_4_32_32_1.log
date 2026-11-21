@@ -1,0 +1,144 @@
+----- BEGIN BICYCLE -----
+INFO,example,BICYCLE
+INFO,network,4-32-32-1
+INFO,activations,relu,relu
+INFO,relative_degree,1
+INFO,n_inputs,2
+INFO,parameter_bytes,4996
+INFO,w_df_bytes,512
+INFO,w_ad_bytes,256
+INFO,n_iters,1000
+INFO,n_warmup,16
+INFO,n_validation,10000
+INFO,seed_timing,20261109
+INFO,seed_validation,20261110
+INFO,compiler,14.2.0
+INFO,optimize,1
+INFO,fast_math,1
+INFO,cxx_flags,-O2 -ffast-math -funroll-loops
+INFO,target,esp32s3
+INFO,idf_version,v5.5.4-dirty
+INFO,app_version,1
+INFO,build,Nov 12 2026 16:16:42
+INFO,chip_model,9
+INFO,chip_revision,v0.2
+INFO,chip_cores,2
+INFO,cpu_mhz,240
+INFO,measured_cycles_per_us,239.996
+INFO,core_id,0
+INFO,tick_hz,100
+INFO,dcache_bytes,32768
+INFO,icache_bytes,16384
+INFO,heap_hooks,1
+INFO,free_heap_B,366284
+INFO,status,validating against the double-precision reference (a few minutes on the ESP32-S3)
+KINK,BICYCLE,1.0e-04,14,10000
+ERR,BICYCLE,dual_seq,h,1.868e-05,7.164e-06
+ERR,BICYCLE,dual_seq,Lf,1.153e-05,2.502e-06
+ERR,BICYCLE,dual_seq,Lg1,7.987e-07,5.797e-07
+ERR,BICYCLE,dual_seq,Lg2,1.624e-04,1.164e-05
+ERR,BICYCLE,dual_shared,h,1.868e-05,7.164e-06
+ERR,BICYCLE,dual_shared,Lf,1.153e-05,2.502e-06
+ERR,BICYCLE,dual_shared,Lg1,7.987e-07,5.797e-07
+ERR,BICYCLE,dual_shared,Lg2,1.624e-04,1.164e-05
+ERR,BICYCLE,rev_static,h,1.868e-05,7.164e-06
+ERR,BICYCLE,rev_static,Lf,1.428e-05,1.492e-06
+ERR,BICYCLE,rev_static,Lg1,1.317e-06,1.317e-06
+ERR,BICYCLE,rev_static,Lg2,9.562e-05,5.951e-06
+ERR,BICYCLE,rev_heap,h,1.868e-05,7.164e-06
+ERR,BICYCLE,rev_heap,Lf,1.428e-05,1.552e-06
+ERR,BICYCLE,rev_heap,Lg1,1.317e-06,1.317e-06
+ERR,BICYCLE,rev_heap,Lg2,9.562e-05,5.951e-06
+ERRK,BICYCLE,dual_seq,h,7.208e-06,2.098e-06
+ERRK,BICYCLE,dual_seq,Lf,1.895e-06,4.056e-07
+ERRK,BICYCLE,dual_seq,Lg1,4.827e-07,2.843e-07
+ERRK,BICYCLE,dual_seq,Lg2,4.617e-05,1.563e-06
+FLIP,BICYCLE,dual_seq,0
+ERRK,BICYCLE,dual_shared,h,7.208e-06,2.098e-06
+ERRK,BICYCLE,dual_shared,Lf,1.895e-06,4.056e-07
+ERRK,BICYCLE,dual_shared,Lg1,4.827e-07,2.843e-07
+ERRK,BICYCLE,dual_shared,Lg2,4.617e-05,1.563e-06
+FLIP,BICYCLE,dual_shared,0
+ERRK,BICYCLE,rev_static,h,7.208e-06,2.098e-06
+ERRK,BICYCLE,rev_static,Lf,5.037e-06,3.898e-07
+ERRK,BICYCLE,rev_static,Lg1,5.579e-07,3.542e-07
+ERRK,BICYCLE,rev_static,Lg2,1.851e-05,7.177e-07
+FLIP,BICYCLE,rev_static,0
+ERRK,BICYCLE,rev_heap,h,7.208e-06,2.098e-06
+ERRK,BICYCLE,rev_heap,Lf,5.037e-06,3.907e-07
+ERRK,BICYCLE,rev_heap,Lg1,5.579e-07,3.542e-07
+ERRK,BICYCLE,rev_heap,Lg2,1.851e-05,7.177e-07
+FLIP,BICYCLE,rev_heap,0
+INFO,validation,PASS
+TIME,BICYCLE,dual_seq,ASM,EN,1000,96.779,97.004,102.863,103.188,97.057
+COLD,BICYCLE,dual_seq,136.704
+TIME,BICYCLE,dual_shared,ASM,EN,1000,61.525,61.613,61.775,67.688,61.645
+COLD,BICYCLE,dual_shared,124.700
+TIME,BICYCLE,rev_static,ASM,EN,1000,47.817,47.888,47.950,53.967,47.910
+COLD,BICYCLE,rev_static,102.446
+TIME,BICYCLE,rev_heap,ASM,EN,1000,143.558,143.558,149.296,150.304,143.647
+COLD,BICYCLE,rev_heap,244.825
+TIME,BICYCLE,dual_seq,STEP,EN,1000,97.963,98.175,99.579,105.483,98.600
+TIME,BICYCLE,dual_shared,STEP,EN,1000,62.621,62.725,64.033,70.000,63.201
+TIME,BICYCLE,rev_static,STEP,EN,1000,48.929,49.004,50.308,56.246,49.466
+TIME,BICYCLE,rev_heap,STEP,EN,1000,144.642,144.650,150.379,152.621,145.204
+TIME,BICYCLE,dual_seq,ASM,MASK,1000,96.779,97.004,97.204,97.304,96.996
+TIME,BICYCLE,dual_shared,ASM,MASK,1000,61.525,61.608,61.675,62.088,61.609
+TIME,BICYCLE,rev_static,ASM,MASK,1000,47.817,47.888,47.946,48.113,47.885
+TIME,BICYCLE,rev_heap,ASM,MASK,1000,143.558,143.558,143.758,144.288,143.563
+TIME,BICYCLE,dual_seq,STEP,MASK,1000,97.963,98.175,99.508,99.579,98.546
+TIME,BICYCLE,dual_shared,STEP,MASK,1000,62.621,62.725,63.988,64.221,63.159
+TIME,BICYCLE,rev_static,STEP,MASK,1000,48.929,49.004,50.296,50.350,49.436
+TIME,BICYCLE,rev_heap,STEP,MASK,1000,144.642,144.642,145.938,146.117,145.112
+INFO,stack_probe_empty_call_B,0
+MEM,BICYCLE,dual_seq,256,296,0,0
+MEM,BICYCLE,dual_shared,512,600,0,0
+MEM,BICYCLE,rev_static,512,24,0,0
+MEM,BICYCLE,rev_heap,0,328,816,11
+----- END BICYCLE -----
+SIZE,code,5,bench::m_empty(ex::Case const&, ex::Out&)
+SIZE,code,22,bench::m_dual_shared(ex::Case const&, ex::Out&)
+SIZE,code,22,bench::m_rev_static(ex::Case const&, ex::Out&)
+SIZE,code,73,bench::m_dual_seq(ex::Case const&, ex::Out&)
+SIZE,code,4538,bench::m_rev_heap(ex::Case const&, ex::Out&)
+SIZE,code,1369,dual_cbf::forward_directional(float const*, float const*)
+SIZE,code,1605,dual_cbf::evaluate_cbf_shared(float const*, float const*, float const*, float*, float*, float*)
+SIZE,flash,4,dual_cbf::b2
+SIZE,flash,128,dual_cbf::W2
+SIZE,flash,128,dual_cbf::b0
+SIZE,flash,128,dual_cbf::b1
+SIZE,flash,512,dual_cbf::W0
+SIZE,flash,4096,dual_cbf::W1
+SIZE,ram,128,dual_cbf::shared_a
+SIZE,ram,128,dual_cbf::shared_d0
+SIZE,ram,128,dual_cbf::shared_d1
+SIZE,ram,128,dual_cbf::shared_d2
+SIZE,ram,256,dual_cbf::scratch
+SIZE,code,3933,ref64::evaluate(double const*, double const*, double*, double*, double*, double*)
+SIZE,ram,256,ref64::P1
+SIZE,ram,256,ref64::P2
+SIZE,ram,256,ref64::Q1
+SIZE,ram,256,ref64::Q2
+SIZE,ram,256,ref64::gA
+SIZE,ram,256,ref64::gB
+SIZE,ram,256,ref64::gdA
+SIZE,ram,256,ref64::gdB
+SIZE,ram,256,ref64::ta
+SIZE,ram,256,ref64::td
+SIZE,ram,256,ref64::z
+SIZE,ram,256,ref64::zd
+SIZE,code,1352,rev_static::evaluate_cbf(float const*, float const*, float const*, float*, float*, float*)
+SIZE,ram,128,rev_static::P1
+SIZE,ram,128,rev_static::P2
+SIZE,ram,128,rev_static::gA
+SIZE,ram,128,rev_static::gB
+SIZE,ram,4,reverse_mode_ad::peak_dynamic_bytes()::s
+SIZETOTAL,bench::m_,code,4660
+SIZETOTAL,dual_cbf::,code,2974
+SIZETOTAL,dual_cbf::,flash,4996
+SIZETOTAL,dual_cbf::,ram,768
+SIZETOTAL,ref64::,code,3933
+SIZETOTAL,ref64::,ram,3072
+SIZETOTAL,rev_static::,code,1352
+SIZETOTAL,rev_static::,ram,512
+SIZETOTAL,reverse_mode_ad::,ram,4

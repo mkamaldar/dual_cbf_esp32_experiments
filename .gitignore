@@ -6,27 +6,36 @@ __pycache__/
 venv/
 .pytest_cache/
 
-# ESP-IDF build artifacts
+# ESP-IDF build output
 build/
 sdkconfig
 sdkconfig.old
 managed_components/
 dependencies.lock
 
-# Captured serial logs and parsed measurement output
-*/serial.log
-paper_measurements.tex
+# Output of tools/run_experiments.py (new runs; the logs behind the paper
+# are kept in paper_logs/)
+/*/serial.log
+*.partial.log
+build_output.txt
+logs.zip
+
+# Output of the host pre-flight and of tools/count_qp_fallback.cpp
+/*/host.log
+/count
+/count.exe
+
+# Figures (closed_loop.pdf is written by 03_run_closed_loop.py and by
+# plot_closed_loop.m)
+*.pdf
+*.eps
+
+# Backup written by tools/collect.py --tex
 *.bak
 
-# Generated host binaries
-/tmp/bicycle_host
-/tmp/vdp_host
-/tmp/pend_host
+# MATLAB
+*.asv
 
-# Closed-loop simulation output
-*.pdf
-!docs/*.pdf
-
-# OS
+# Operating system
 .DS_Store
 Thumbs.db

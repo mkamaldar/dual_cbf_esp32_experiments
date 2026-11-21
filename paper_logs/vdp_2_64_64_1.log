@@ -1,0 +1,135 @@
+----- BEGIN VDP -----
+INFO,example,VDP
+INFO,network,2-64-64-1
+INFO,activations,relu,relu
+INFO,relative_degree,1
+INFO,n_inputs,1
+INFO,parameter_bytes,17668
+INFO,w_df_bytes,1024
+INFO,w_ad_bytes,512
+INFO,n_iters,1000
+INFO,n_warmup,16
+INFO,n_validation,10000
+INFO,seed_timing,20261109
+INFO,seed_validation,20261110
+INFO,compiler,14.2.0
+INFO,optimize,1
+INFO,fast_math,1
+INFO,cxx_flags,-O2 -ffast-math -funroll-loops
+INFO,target,esp32s3
+INFO,idf_version,v5.5.4-dirty
+INFO,app_version,1
+INFO,build,Nov 12 2026 16:18:19
+INFO,chip_model,9
+INFO,chip_revision,v0.2
+INFO,chip_cores,2
+INFO,cpu_mhz,240
+INFO,measured_cycles_per_us,239.996
+INFO,core_id,0
+INFO,tick_hz,100
+INFO,dcache_bytes,32768
+INFO,icache_bytes,16384
+INFO,heap_hooks,1
+INFO,free_heap_B,362484
+INFO,status,validating against the double-precision reference (a few minutes on the ESP32-S3)
+KINK,VDP,1.0e-04,78,10000
+ERR,VDP,dual_seq,h,1.068e-06,3.541e-07
+ERR,VDP,dual_seq,Lf,1.717e-05,5.287e-07
+ERR,VDP,dual_seq,Lg1,4.206e-07,2.939e-07
+ERR,VDP,dual_shared,h,1.068e-06,3.541e-07
+ERR,VDP,dual_shared,Lf,1.717e-05,5.287e-07
+ERR,VDP,dual_shared,Lg1,4.206e-07,2.939e-07
+ERR,VDP,rev_static,h,1.068e-06,3.541e-07
+ERR,VDP,rev_static,Lf,1.164e-05,9.495e-07
+ERR,VDP,rev_static,Lg1,4.384e-07,2.672e-07
+ERR,VDP,rev_heap,h,1.068e-06,3.541e-07
+ERR,VDP,rev_heap,Lf,1.169e-05,8.899e-07
+ERR,VDP,rev_heap,Lg1,4.384e-07,2.672e-07
+ERRK,VDP,dual_seq,h,5.671e-07,2.235e-07
+ERRK,VDP,dual_seq,Lf,4.306e-01,2.792e-02
+ERRK,VDP,dual_seq,Lg1,2.882e-02,2.882e-02
+FLIP,VDP,dual_seq,1
+ERRK,VDP,dual_shared,h,5.671e-07,2.235e-07
+ERRK,VDP,dual_shared,Lf,4.306e-01,2.792e-02
+ERRK,VDP,dual_shared,Lg1,2.882e-02,2.882e-02
+FLIP,VDP,dual_shared,1
+ERRK,VDP,rev_static,h,5.671e-07,2.235e-07
+ERRK,VDP,rev_static,Lf,4.306e-01,2.792e-02
+ERRK,VDP,rev_static,Lg1,2.882e-02,2.882e-02
+FLIP,VDP,rev_static,1
+ERRK,VDP,rev_heap,h,5.671e-07,2.235e-07
+ERRK,VDP,rev_heap,Lf,4.306e-01,2.792e-02
+ERRK,VDP,rev_heap,Lg1,2.882e-02,2.882e-02
+FLIP,VDP,rev_heap,1
+INFO,validation,PASS
+TIME,VDP,dual_seq,ASM,EN,1000,237.075,237.292,243.388,243.571,237.454
+COLD,VDP,dual_seq,283.213
+TIME,VDP,dual_shared,ASM,EN,1000,181.338,181.413,187.433,187.558,181.534
+COLD,VDP,dual_shared,225.933
+TIME,VDP,rev_static,ASM,EN,1000,169.642,169.729,175.754,175.813,169.832
+COLD,VDP,rev_static,193.058
+TIME,VDP,rev_heap,ASM,EN,1000,281.983,281.983,287.725,288.721,282.156
+COLD,VDP,rev_heap,364.896
+TIME,VDP,dual_seq,STEP,EN,1000,237.192,237.458,243.454,244.196,237.709
+TIME,VDP,dual_shared,STEP,EN,1000,181.454,181.554,187.588,188.292,181.790
+TIME,VDP,rev_static,STEP,EN,1000,169.758,169.858,175.875,176.008,170.086
+TIME,VDP,rev_heap,STEP,EN,1000,282.100,282.100,288.525,289.404,282.411
+TIME,VDP,dual_seq,ASM,MASK,1000,237.075,237.292,237.617,237.883,237.310
+TIME,VDP,dual_shared,ASM,MASK,1000,181.338,181.413,181.725,182.733,181.427
+TIME,VDP,rev_static,ASM,MASK,1000,169.642,169.729,169.900,170.008,169.729
+TIME,VDP,rev_heap,ASM,MASK,1000,281.983,281.983,282.158,284.092,281.991
+TIME,VDP,dual_seq,STEP,MASK,1000,237.183,237.450,238.204,239.125,237.557
+TIME,VDP,dual_shared,STEP,MASK,1000,181.446,181.546,182.275,182.988,181.672
+TIME,VDP,rev_static,STEP,MASK,1000,169.750,169.846,170.563,170.663,169.975
+TIME,VDP,rev_heap,STEP,MASK,1000,282.092,282.092,282.812,283.008,282.235
+INFO,stack_probe_empty_call_B,0
+MEM,VDP,dual_seq,512,552,0,0
+MEM,VDP,dual_shared,768,824,0,0
+MEM,VDP,rev_static,1024,152,0,0
+MEM,VDP,rev_heap,0,328,1576,11
+----- END VDP -----
+SIZE,code,5,bench::m_empty(ex::Case const&, ex::Out&)
+SIZE,code,24,bench::m_dual_shared(ex::Case const&, ex::Out&)
+SIZE,code,24,bench::m_rev_static(ex::Case const&, ex::Out&)
+SIZE,code,40,bench::m_dual_seq(ex::Case const&, ex::Out&)
+SIZE,code,4258,bench::m_rev_heap(ex::Case const&, ex::Out&)
+SIZE,code,1377,dual_cbf::evaluate_cbf_shared(float const*, float const*, float const*, float*, float*, float*)
+SIZE,code,1539,dual_cbf::forward_directional(float const*, float const*)
+SIZE,flash,4,dual_cbf::b2
+SIZE,flash,256,dual_cbf::W2
+SIZE,flash,256,dual_cbf::b0
+SIZE,flash,256,dual_cbf::b1
+SIZE,flash,512,dual_cbf::W0
+SIZE,flash,16384,dual_cbf::W1
+SIZE,ram,256,dual_cbf::shared_a
+SIZE,ram,256,dual_cbf::shared_d0
+SIZE,ram,256,dual_cbf::shared_d1
+SIZE,ram,512,dual_cbf::scratch
+SIZE,code,3423,ref64::evaluate(double const*, double const*, double*, double*, double*, double*)
+SIZE,ram,512,ref64::P1
+SIZE,ram,512,ref64::P2
+SIZE,ram,512,ref64::Q1
+SIZE,ram,512,ref64::Q2
+SIZE,ram,512,ref64::gA
+SIZE,ram,512,ref64::gB
+SIZE,ram,512,ref64::gdA
+SIZE,ram,512,ref64::gdB
+SIZE,ram,512,ref64::ta
+SIZE,ram,512,ref64::td
+SIZE,ram,512,ref64::z
+SIZE,ram,512,ref64::zd
+SIZE,code,1386,rev_static::evaluate_cbf(float const*, float const*, float const*, float*, float*, float*)
+SIZE,ram,256,rev_static::P1
+SIZE,ram,256,rev_static::P2
+SIZE,ram,256,rev_static::gA
+SIZE,ram,256,rev_static::gB
+SIZE,ram,4,reverse_mode_ad::peak_dynamic_bytes()::s
+SIZETOTAL,bench::m_,code,4351
+SIZETOTAL,dual_cbf::,code,2916
+SIZETOTAL,dual_cbf::,flash,17668
+SIZETOTAL,dual_cbf::,ram,1280
+SIZETOTAL,ref64::,code,3423
+SIZETOTAL,ref64::,ram,6144
+SIZETOTAL,rev_static::,code,1386
+SIZETOTAL,rev_static::,ram,1024
+SIZETOTAL,reverse_mode_ad::,ram,4

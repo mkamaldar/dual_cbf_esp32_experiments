@@ -1,0 +1,23 @@
+# CPU clock fixed at 240 MHz, no power management.
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+CONFIG_PM_ENABLE=n
+
+# No Bluetooth; Wi-Fi is never started by the application.
+CONFIG_BT_ENABLED=n
+
+# Console.
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+
+# Compiler optimization: -O2.
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+
+# Main task stack: holds the 4 KB stack probe and the benchmark locals.
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=16384
+
+# Allocation and free hooks: the firmware counts every heap allocation made
+# while a method runs (compiled code and linked libraries).
+CONFIG_HEAP_USE_HOOKS=y
+
+# The validation loop evaluates a double-precision reference and runs for
+# minutes; the task watchdog is not needed for a benchmark.
+CONFIG_ESP_TASK_WDT_EN=n

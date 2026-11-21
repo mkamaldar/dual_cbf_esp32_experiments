@@ -1,0 +1,135 @@
+----- BEGIN DEPTH2 -----
+INFO,example,DEPTH2
+INFO,network,2-32-32-1
+INFO,activations,relu,relu
+INFO,relative_degree,1
+INFO,n_inputs,1
+INFO,parameter_bytes,4740
+INFO,w_df_bytes,512
+INFO,w_ad_bytes,256
+INFO,n_iters,1000
+INFO,n_warmup,16
+INFO,n_validation,10000
+INFO,seed_timing,20261109
+INFO,seed_validation,20261110
+INFO,compiler,14.2.0
+INFO,optimize,1
+INFO,fast_math,1
+INFO,cxx_flags,-O2 -ffast-math -funroll-loops
+INFO,target,esp32s3
+INFO,idf_version,v5.5.4-dirty
+INFO,app_version,1
+INFO,build,Nov 12 2026 16:23:45
+INFO,chip_model,9
+INFO,chip_revision,v0.2
+INFO,chip_cores,2
+INFO,cpu_mhz,240
+INFO,measured_cycles_per_us,239.997
+INFO,core_id,0
+INFO,tick_hz,100
+INFO,dcache_bytes,32768
+INFO,icache_bytes,16384
+INFO,heap_hooks,1
+INFO,free_heap_B,366708
+INFO,status,validating against the double-precision reference (a few minutes on the ESP32-S3)
+KINK,DEPTH2,1.0e-04,35,10000
+ERR,DEPTH2,dual_seq,h,7.763e-07,4.559e-07
+ERR,DEPTH2,dual_seq,Lf,1.591e-05,5.626e-07
+ERR,DEPTH2,dual_seq,Lg1,2.672e-07,1.819e-07
+ERR,DEPTH2,dual_shared,h,7.763e-07,4.559e-07
+ERR,DEPTH2,dual_shared,Lf,1.591e-05,5.626e-07
+ERR,DEPTH2,dual_shared,Lg1,2.672e-07,1.819e-07
+ERR,DEPTH2,rev_static,h,7.763e-07,4.559e-07
+ERR,DEPTH2,rev_static,Lf,1.515e-05,3.820e-07
+ERR,DEPTH2,rev_static,Lg1,2.364e-07,1.893e-07
+ERR,DEPTH2,rev_heap,h,7.763e-07,4.559e-07
+ERR,DEPTH2,rev_heap,Lf,1.314e-05,3.455e-07
+ERR,DEPTH2,rev_heap,Lg1,2.364e-07,1.893e-07
+ERRK,DEPTH2,dual_seq,h,1.769e-07,1.722e-07
+ERRK,DEPTH2,dual_seq,Lf,2.779e-06,1.456e-07
+ERRK,DEPTH2,dual_seq,Lg1,1.907e-07,1.886e-07
+FLIP,DEPTH2,dual_seq,0
+ERRK,DEPTH2,dual_shared,h,1.769e-07,1.722e-07
+ERRK,DEPTH2,dual_shared,Lf,2.779e-06,1.456e-07
+ERRK,DEPTH2,dual_shared,Lg1,1.907e-07,1.886e-07
+FLIP,DEPTH2,dual_shared,0
+ERRK,DEPTH2,rev_static,h,1.769e-07,1.722e-07
+ERRK,DEPTH2,rev_static,Lf,2.150e-06,2.379e-07
+ERRK,DEPTH2,rev_static,Lg1,1.124e-07,1.036e-07
+FLIP,DEPTH2,rev_static,0
+ERRK,DEPTH2,rev_heap,h,1.769e-07,1.722e-07
+ERRK,DEPTH2,rev_heap,Lf,1.223e-06,2.379e-07
+ERRK,DEPTH2,rev_heap,Lg1,1.124e-07,1.036e-07
+FLIP,DEPTH2,rev_heap,0
+INFO,validation,PASS
+TIME,DEPTH2,dual_seq,ASM,EN,1000,62.708,62.883,63.100,68.988,62.920
+COLD,DEPTH2,dual_seq,107.213
+TIME,DEPTH2,dual_shared,ASM,EN,1000,44.892,44.958,45.013,51.029,44.981
+COLD,DEPTH2,dual_shared,90.904
+TIME,DEPTH2,rev_static,ASM,EN,1000,45.650,45.742,45.804,51.829,45.763
+COLD,DEPTH2,rev_static,82.713
+TIME,DEPTH2,rev_heap,ASM,EN,1000,139.425,139.433,145.171,146.175,139.523
+COLD,DEPTH2,rev_heap,221.858
+TIME,DEPTH2,dual_seq,STEP,EN,1000,62.825,63.025,63.821,69.746,63.162
+TIME,DEPTH2,dual_shared,STEP,EN,1000,45.008,45.083,45.821,51.163,45.234
+TIME,DEPTH2,rev_static,STEP,EN,1000,45.767,45.871,46.625,52.004,46.016
+TIME,DEPTH2,rev_heap,STEP,EN,1000,139.542,139.550,145.288,147.004,139.770
+TIME,DEPTH2,dual_seq,ASM,MASK,1000,62.708,62.883,63.008,63.542,62.878
+TIME,DEPTH2,dual_shared,ASM,MASK,1000,44.892,44.958,45.000,45.325,44.956
+TIME,DEPTH2,rev_static,ASM,MASK,1000,45.650,45.742,45.800,46.892,45.739
+TIME,DEPTH2,rev_heap,ASM,MASK,1000,139.425,139.433,139.600,139.817,139.436
+TIME,DEPTH2,dual_seq,STEP,MASK,1000,62.817,63.017,63.804,63.829,63.117
+TIME,DEPTH2,dual_shared,STEP,MASK,1000,45.000,45.075,45.792,45.988,45.196
+TIME,DEPTH2,rev_static,STEP,MASK,1000,45.758,45.863,46.613,46.621,45.977
+TIME,DEPTH2,rev_heap,STEP,MASK,1000,139.533,139.542,140.254,140.400,139.675
+INFO,stack_probe_empty_call_B,0
+MEM,DEPTH2,dual_seq,256,296,0,0
+MEM,DEPTH2,dual_shared,384,440,0,0
+MEM,DEPTH2,rev_static,512,24,0,0
+MEM,DEPTH2,rev_heap,0,328,808,11
+----- END DEPTH2 -----
+SIZE,code,5,bench::m_empty(ex::Case const&, ex::Out&)
+SIZE,code,24,bench::m_dual_shared(ex::Case const&, ex::Out&)
+SIZE,code,24,bench::m_rev_static(ex::Case const&, ex::Out&)
+SIZE,code,40,bench::m_dual_seq(ex::Case const&, ex::Out&)
+SIZE,code,4258,bench::m_rev_heap(ex::Case const&, ex::Out&)
+SIZE,code,1353,dual_cbf::forward_directional(float const*, float const*)
+SIZE,code,1782,dual_cbf::evaluate_cbf_shared(float const*, float const*, float const*, float*, float*, float*)
+SIZE,flash,4,dual_cbf::b2
+SIZE,flash,128,dual_cbf::W2
+SIZE,flash,128,dual_cbf::b0
+SIZE,flash,128,dual_cbf::b1
+SIZE,flash,256,dual_cbf::W0
+SIZE,flash,4096,dual_cbf::W1
+SIZE,ram,128,dual_cbf::shared_a
+SIZE,ram,128,dual_cbf::shared_d0
+SIZE,ram,128,dual_cbf::shared_d1
+SIZE,ram,256,dual_cbf::scratch
+SIZE,code,3441,ref64::evaluate(double const*, double const*, double*, double*, double*, double*)
+SIZE,ram,256,ref64::P1
+SIZE,ram,256,ref64::P2
+SIZE,ram,256,ref64::Q1
+SIZE,ram,256,ref64::Q2
+SIZE,ram,256,ref64::gA
+SIZE,ram,256,ref64::gB
+SIZE,ram,256,ref64::gdA
+SIZE,ram,256,ref64::gdB
+SIZE,ram,256,ref64::ta
+SIZE,ram,256,ref64::td
+SIZE,ram,256,ref64::z
+SIZE,ram,256,ref64::zd
+SIZE,code,1208,rev_static::evaluate_cbf(float const*, float const*, float const*, float*, float*, float*)
+SIZE,ram,128,rev_static::P1
+SIZE,ram,128,rev_static::P2
+SIZE,ram,128,rev_static::gA
+SIZE,ram,128,rev_static::gB
+SIZE,ram,4,reverse_mode_ad::peak_dynamic_bytes()::s
+SIZETOTAL,bench::m_,code,4351
+SIZETOTAL,dual_cbf::,code,3135
+SIZETOTAL,dual_cbf::,flash,4740
+SIZETOTAL,dual_cbf::,ram,640
+SIZETOTAL,ref64::,code,3441
+SIZETOTAL,ref64::,ram,3072
+SIZETOTAL,rev_static::,code,1208
+SIZETOTAL,rev_static::,ram,512
+SIZETOTAL,reverse_mode_ad::,ram,4

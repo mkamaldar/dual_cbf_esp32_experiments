@@ -1,0 +1,4 @@
+* text=auto
+*.pt   binary
+*.onnx binary
+*.mat  binary

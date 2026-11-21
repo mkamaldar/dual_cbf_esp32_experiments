@@ -1,0 +1,132 @@
+----- BEGIN PENDULUM -----
+INFO,example,PENDULUM
+INFO,network,2-32-32-1
+INFO,activations,softplus,softplus
+INFO,relative_degree,2
+INFO,n_inputs,1
+INFO,parameter_bytes,4740
+INFO,w_df_bytes,512
+INFO,w_ad_bytes,256
+INFO,n_iters,1000
+INFO,n_warmup,16
+INFO,n_validation,10000
+INFO,seed_timing,20261109
+INFO,seed_validation,20261110
+INFO,compiler,14.2.0
+INFO,optimize,1
+INFO,fast_math,1
+INFO,cxx_flags,-O2 -ffast-math -funroll-loops
+INFO,target,esp32s3
+INFO,idf_version,v5.5.4-dirty
+INFO,app_version,1
+INFO,build,Nov 12 2026 16:21:11
+INFO,chip_model,9
+INFO,chip_revision,v0.2
+INFO,chip_cores,2
+INFO,cpu_mhz,240
+INFO,measured_cycles_per_us,239.999
+INFO,core_id,0
+INFO,tick_hz,100
+INFO,dcache_bytes,32768
+INFO,icache_bytes,16384
+INFO,heap_hooks,1
+INFO,free_heap_B,365412
+INFO,status,validating against the double-precision reference (a few minutes on the ESP32-S3)
+KINK,PENDULUM,1.0e-04,0,10000
+ERR,PENDULUM,hyperdual,h,6.858e-07,5.483e-07
+ERR,PENDULUM,hyperdual,Lf,1.947e-06,5.990e-07
+ERR,PENDULUM,hyperdual,L2f,1.146e-05,4.538e-07
+ERR,PENDULUM,hyperdual,LgLf1,8.731e-07,4.148e-07
+ERR,PENDULUM,jet3,h,6.858e-07,5.483e-07
+ERR,PENDULUM,jet3,Lf,1.947e-06,5.990e-07
+ERR,PENDULUM,jet3,L2f,1.146e-05,4.538e-07
+ERR,PENDULUM,jet3,LgLf1,1.844e-06,1.220e-06
+ERR,PENDULUM,rev2_static,h,6.858e-07,5.483e-07
+ERR,PENDULUM,rev2_static,Lf,1.947e-06,5.990e-07
+ERR,PENDULUM,rev2_static,L2f,1.072e-05,5.058e-07
+ERR,PENDULUM,rev2_static,LgLf1,1.096e-06,5.093e-07
+ERR,PENDULUM,rev_fd,h,6.858e-07,5.483e-07
+ERR,PENDULUM,rev_fd,Lf,2.175e-06,7.306e-07
+ERR,PENDULUM,rev_fd,L2f,2.663e-02,6.531e-04
+ERR,PENDULUM,rev_fd,LgLf1,1.096e-06,5.093e-07
+INFO,validation,PASS
+TIME,PENDULUM,hyperdual,ASM,EN,1000,506.538,510.779,519.508,520.271,511.190
+COLD,PENDULUM,hyperdual,680.558
+TIME,PENDULUM,jet3,ASM,EN,1000,732.846,739.396,749.400,751.217,739.810
+COLD,PENDULUM,jet3,852.371
+TIME,PENDULUM,rev2_static,ASM,EN,1000,270.104,272.129,278.579,280.383,272.441
+COLD,PENDULUM,rev2_static,434.254
+TIME,PENDULUM,rev_fd,ASM,EN,1000,979.575,986.513,996.613,998.525,986.666
+COLD,PENDULUM,rev_fd,1185.488
+TIME,PENDULUM,hyperdual,STEP,EN,1000,506.713,511.404,519.979,521.892,511.695
+TIME,PENDULUM,jet3,STEP,EN,1000,733.021,739.996,750.429,752.013,740.302
+TIME,PENDULUM,rev2_static,STEP,EN,1000,270.279,272.775,278.800,281.200,272.944
+TIME,PENDULUM,rev_fd,STEP,EN,1000,979.750,987.008,996.517,999.596,987.177
+TIME,PENDULUM,hyperdual,ASM,MASK,1000,506.538,510.538,514.729,515.171,510.873
+TIME,PENDULUM,jet3,ASM,MASK,1000,732.846,738.858,745.133,745.796,739.347
+TIME,PENDULUM,rev2_static,ASM,MASK,1000,270.104,272.108,274.200,274.421,272.272
+TIME,PENDULUM,rev_fd,ASM,MASK,1000,979.575,985.588,991.863,992.525,986.082
+TIME,PENDULUM,hyperdual,STEP,MASK,1000,506.842,511.100,515.525,516.050,511.367
+TIME,PENDULUM,jet3,STEP,MASK,1000,733.017,739.325,745.896,746.675,739.843
+TIME,PENDULUM,rev2_static,STEP,MASK,1000,270.275,272.683,275.029,275.300,272.766
+TIME,PENDULUM,rev_fd,STEP,MASK,1000,979.825,986.108,992.625,993.567,986.578
+INFO,stack_probe_empty_call_B,0
+MEM,PENDULUM,hyperdual,512,696,0,0
+MEM,PENDULUM,jet3,384,584,0,0
+MEM,PENDULUM,rev2_static,1280,440,0,0
+MEM,PENDULUM,rev_fd,0,408,800,30
+----- END PENDULUM -----
+SIZE,code,5,bench::m_empty(ex::Case const&, ex::Out&)
+SIZE,code,40,bench::m_rev2_static(ex::Case const&, ex::Out&)
+SIZE,code,64,bench::m_hyperdual(ex::Case const&, ex::Out&)
+SIZE,code,147,bench::m_jet3(ex::Case const&, ex::Out&)
+SIZE,code,228,bench::m_rev_fd(ex::Case const&, ex::Out&)
+SIZE,code,3590,bench::m_rev_fd(ex::Case const&, ex::Out&)::{lambda(float const*, float*, float*)#1}::operator()(float const*, float*, float*) const [clone]
+SIZE,code,1669,dual_cbf::forward_hyperdual(float const*, float const*, float const*, float const*)
+SIZE,flash,4,dual_cbf::b2
+SIZE,flash,128,dual_cbf::W2
+SIZE,flash,128,dual_cbf::b0
+SIZE,flash,128,dual_cbf::b1
+SIZE,flash,256,dual_cbf::W0
+SIZE,flash,4096,dual_cbf::W1
+SIZE,ram,512,dual_cbf::scratch
+SIZE,code,1592,jet3::pass(float const*, float const*, float const*, float*, float*, float*)
+SIZE,ram,128,jet3::y0
+SIZE,ram,128,jet3::y1
+SIZE,ram,128,jet3::y2
+SIZE,code,2987,ref64::evaluate(double const*, double const*, double*, double*, double*, double*)
+SIZE,ram,256,ref64::P1
+SIZE,ram,256,ref64::P2
+SIZE,ram,256,ref64::Q1
+SIZE,ram,256,ref64::Q2
+SIZE,ram,256,ref64::gA
+SIZE,ram,256,ref64::gB
+SIZE,ram,256,ref64::gdA
+SIZE,ram,256,ref64::gdB
+SIZE,ram,256,ref64::ta
+SIZE,ram,256,ref64::td
+SIZE,ram,256,ref64::z
+SIZE,ram,256,ref64::zd
+SIZE,code,2521,rev2_static::evaluate_cbf_2nd_order(float const*, float const*, float const*, float const*, float const*, int, float*, float*, float*, float*)
+SIZE,ram,128,rev2_static::P1
+SIZE,ram,128,rev2_static::P2
+SIZE,ram,128,rev2_static::Q1
+SIZE,ram,128,rev2_static::Q2
+SIZE,ram,128,rev2_static::gA
+SIZE,ram,128,rev2_static::gB
+SIZE,ram,128,rev2_static::gdA
+SIZE,ram,128,rev2_static::gdB
+SIZE,ram,128,rev2_static::z
+SIZE,ram,128,rev2_static::zd
+SIZE,ram,4,reverse_mode_ad::peak_dynamic_bytes()::s
+SIZETOTAL,bench::m_,code,4074
+SIZETOTAL,dual_cbf::,code,1669
+SIZETOTAL,dual_cbf::,flash,4740
+SIZETOTAL,dual_cbf::,ram,512
+SIZETOTAL,jet3::,code,1592
+SIZETOTAL,jet3::,ram,384
+SIZETOTAL,ref64::,code,2987
+SIZETOTAL,ref64::,ram,3072
+SIZETOTAL,rev2_static::,code,2521
+SIZETOTAL,rev2_static::,ram,1280
+SIZETOTAL,reverse_mode_ad::,ram,4
