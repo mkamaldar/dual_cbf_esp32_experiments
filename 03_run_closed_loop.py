@@ -13,7 +13,7 @@ These simulations illustrate the behavior of the filter. They are not a
 verification of continuous-time or sampled-data forward invariance.
 
 Outputs:
-  closed_loop.pdf     three panels (Van der Pol, bicycle, pendulum)
+  closed_loop.pdf     three panels (bicycle, Van der Pol, pendulum)
   sim_results.txt     SIM,<key>,<value> lines read by tools/collect.py
   also: grid check of the high-order CBF inequality for the pendulum barrier,
         a comparison of forward Euler with Runge-Kutta for the Van der Pol case,
@@ -269,7 +269,7 @@ def vdp(ax):
     ax.plot(*x0, "o", color="#222222", ms=3, zorder=6)
     ax.set_xlim(-4, 4); ax.set_ylim(-3.5, 3.5)
     ax.set_xlabel(r"$x_{(1)}$"); ax.set_ylabel(r"$x_{(2)}$")
-    ax.set_title("(a) Van der Pol", fontsize=9)
+    ax.set_title("(b) Van der Pol", fontsize=9)
 
 
 # ---------------------------------------------------------------------------
@@ -335,8 +335,8 @@ def bicycle(ax):
     ax.plot(t, e(Xp), **STYLE["perturbed"])
     ax.plot(t, e(Xn), **STYLE["nominal"])
     ax.set_xlim(0, T); ax.set_ylim(-9, 9)
-    ax.set_xlabel(r"$t$ (s)"); ax.set_ylabel(r"$p_y+\tau_{\rm h}v\,\sin\psi$ (m)")
-    ax.set_title("(b) Bicycle", fontsize=9)
+    ax.set_xlabel(r"$t$ (s)"); ax.set_ylabel(r"$\bar p_y+\tau_{\rm h}\bar v\,\sin\bar\psi$ (m)")
+    ax.set_title("(a) Bicycle", fontsize=9)
 
 
 # ---------------------------------------------------------------------------
@@ -426,12 +426,14 @@ def main() -> None:
     plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "Times", "STIXGeneral", "DejaVu Serif"],
                          "mathtext.fontset": "stix", "font.size": 9, "axes.linewidth": 0.6})
     fig, axes = plt.subplots(1, 3, figsize=(7.2, 2.35))
-    vdp(axes[0]); bicycle(axes[1]); pendulum(axes[2])
+    # Panels in the order of the experiments of the paper. The calls keep their
+    # order, so that sim_results.txt and closed_loop_data.mat are unchanged.
+    vdp(axes[1]); bicycle(axes[0]); pendulum(axes[2])
     from matplotlib.lines import Line2D
     from matplotlib.patches import Patch
     handles, labels = axes[0].get_legend_handles_labels()
     handles += [Patch(facecolor=SAFE_FILL, edgecolor="none"), Line2D([], [], color=BOUNDARY, lw=1.2)]
-    labels += [r"barrier $\geq 0$", "boundary"]
+    labels += ["zero superlevel set", "zero level set"]
     fig.legend(handles, labels, loc="upper center", ncol=5, frameon=False, fontsize=8,
                bbox_to_anchor=(0.5, 1.02), handlelength=3.0, columnspacing=1.6)
     for ax in axes:
