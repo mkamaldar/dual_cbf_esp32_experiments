@@ -19,7 +19,7 @@ against a double-precision reference. The repository contains the training
 scripts, the generated headers, the firmware, the measurement tools, the
 serial logs behind the numbers of the paper, and the closed-loop simulations.
 
-[paper]: https://drive.google.com/file/d/1ryW5-aeYk7cyXl2FccErl3kusam0zbzE/view?usp=sharing
+[paper]: https://arxiv.org/pdf/2604.23995
 [pypi]: https://pypi.org/project/dual-cbf-compiler/
 [compiler]: https://github.com/mkamaldar/dual_cbf_compiler
 
